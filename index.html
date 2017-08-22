@@ -71,8 +71,20 @@
 
   <script>
 
-  const date = new Date();
-  console.log(date);
+  setInterval(setDate, 1000);
+
+  function setDate() {
+    const date = new Date();
+    const seconds = date.getSeconds();
+    const secondsDegrees = ((seconds/60) * 360) + 90
+
+    
+
+    // console.log(seconds);
+    // console.log(secondsDegrees);
+
+  }
+
 
   </script>
 </body>
