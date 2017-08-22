@@ -71,17 +71,21 @@
 
   <script>
 
+  const secondsHand = document.querySelector('.second-hand');
+  const minutesHand = document.querySelector('.min-hand');
+
   setInterval(setDate, 1000);
 
   function setDate() {
     const date = new Date();
+
     const seconds = date.getSeconds();
     const secondsDegrees = ((seconds/60) * 360) + 90
+    secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
-    
-
-    // console.log(seconds);
-    // console.log(secondsDegrees);
+    const minutes = date.getMinutes();
+    const minutesDegrees = ((minutes/60) * 360) + 90
+    minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
 
   }
 
